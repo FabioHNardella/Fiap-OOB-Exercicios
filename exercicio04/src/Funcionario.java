@@ -3,6 +3,12 @@ public class Funcionario {
     String cargo;
     double salario;
 
+    public Funcionario(String nome, String cargo, double salario) {
+        this.nome = nome;
+        this.cargo = cargo;
+        this.salario = salario;
+    }
+
     public void aumentarSalario(double porcentagem) {
         salario = salario * (salario * porcentagem / 100);
     }
@@ -13,7 +19,7 @@ public class Funcionario {
         }
     }
 
-    public void promover(String cargo){
+    public void promover(String cargo) {
         this.cargo = cargo;
     }
 }
