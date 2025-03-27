@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" filepath="$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio04/exercicio04.iml" filepath="$PROJECT_DIR$/exercicio04/exercicio04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio05/exercicio05.iml" filepath="$PROJECT_DIR$/exercicio05/exercicio05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercicio07/exercicio07.iml" filepath="$PROJECT_DIR$/exercicio07/exercicio07.iml" />
+    </modules>
+  </component>
+</project>

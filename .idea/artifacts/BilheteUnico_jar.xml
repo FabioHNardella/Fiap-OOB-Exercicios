@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BilheteUnico:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="exercicio05.jar">
+      <element id="module-output" name="exercicio05" />
+    </root>
+  </artifact>
+</component>

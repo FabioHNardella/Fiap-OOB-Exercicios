@@ -1,10 +1,9 @@
 
+import javax.swing.*;
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 import static java.lang.Long.parseLong;
-import static javax.swing.JOptionPane.showInputDialog;
-import static javax.swing.JOptionPane.showMessageDialog;
-
+import static javax.swing.JOptionPane.*;
 import java.text.DecimalFormat;
 
 public class Util {
@@ -95,6 +94,7 @@ public class Util {
         showMessageDialog(null, + cpf + "não encontrado, tente novamente");
         return -1;
     }
+
     // ADMINISTRADOR
     private void emitirBilhete(){
         if (index < bilhete.length) {
@@ -123,7 +123,17 @@ public class Util {
     }
 
     public void excluirBilhete(){
-        // fazer na próxima aula
+        int indice = pesquisar();
+        int resposta;
+
+        if(indice != -1){
+            resposta = showConfirmDialog(null, "Você tem certeza que deseja deletar o bilhete com o cpf ("+ bilhete[indice].usuario.cpf + "?");
+            if(resposta == YES_OPTION){
+                bilhete[indice] = bilhete[index-1];
+                bilhete[index-1] = null;
+                index--;
+            }
+        }
     }
 
     // USUÁRIO
