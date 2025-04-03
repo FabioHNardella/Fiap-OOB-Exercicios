@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exc07/Exc07.iml" filepath="$PROJECT_DIR$/Exc07/Exc07.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" filepath="$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercicio04/exercicio04.iml" filepath="$PROJECT_DIR$/exercicio04/exercicio04.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercicio05/exercicio05.iml" filepath="$PROJECT_DIR$/exercicio05/exercicio05.iml" />
