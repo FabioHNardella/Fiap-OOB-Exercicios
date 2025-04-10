@@ -8,7 +8,7 @@ import static java.lang.Integer.parseInt;
 import static java.lang.Double.parseDouble;
 import static java.lang.Long.parseLong;
 
-public class Utils {
+public class Util {
     private Fornecedor[] fornecedor = new Fornecedor[3];
     private Produto produto[] = new Produto[3];
     private int idxProduto;
@@ -34,7 +34,7 @@ public class Utils {
                     break;
 
                 case 3:
-                    pesquisarFornecedor();
+                    pesquisar();
                     break;
 
                 case 4:
@@ -49,7 +49,6 @@ public class Utils {
 
     }
 
-    // PRODUTO
     private void cadastrarProduto() {
         String nome;
         int qtdEstoque;
@@ -58,30 +57,39 @@ public class Utils {
         if (fornecedor == null) {
             fornecedor = cadastrarFornecedor();
         }
-        nome = showInputDialog("Nome do produto");
+        nome = showInputDialog("Nome do produto:");
         qtdEstoque = parseInt(showInputDialog("Quantidade em estoque do produto " + nome));
         valorUni = parseDouble(showInputDialog("Preço unitário do produto " + nome));
-
         produto[idxProduto] = new Produto(nome, valorUni, qtdEstoque, fornecedor);
+        idxProduto++;
     }
 
     private void pesquisarProduto() {
         String aux = "Produto não encontrado";
-        String nome = showInputDialog("Nome do produto");
+        String nome = showInputDialog("Nome do produto:");
         for (int i = 0; i < idxProduto; i++) {
             if (produto[i].getNome().equalsIgnoreCase(nome)) {
                 aux = "";
                 aux += "Nome do produto: " + nome + "\n";
                 aux += "Valor unitário do produto: " + produto[i].getValor() + "\n";
                 aux += "Fornecedor do produto: " + produto[i].getFornecedor().getNome() + "\n";
-                aux += "Quantidade do produto em estoque: "+ produto[i].getQtdEstoque() + "\n";
-                return;
+                aux += "Quantidade do produto em estoque: " + produto[i].getQtdEstoque() + "\n";
             }
         }
-        return;
+        showMessageDialog(null, aux);
     }
 
-    // FORNECEDOR
+    private void pesquisar() {
+        String aux = "";
+        Fornecedor fornecedor = pesquisarFornecedor();
+
+        if (fornecedor != null) {
+            aux += "Fornecedor: " + fornecedor.getNome() + "\n";
+            aux += "CNPJ: " + fornecedor.getCnpj() + "\n";
+            showMessageDialog(null, aux);
+        }
+    }
+
     private Fornecedor pesquisarFornecedor() {
         long cnpj = parseLong(showInputDialog("CNPJ do fornecedor"));
         for (int i = 0; i < idxFornecedor; i++) {
@@ -89,13 +97,14 @@ public class Utils {
                 return fornecedor[i];
             }
         }
+        showMessageDialog(null, "CNPJ não cadastrado");
         return null;
     }
 
     private Fornecedor cadastrarFornecedor() {
-        String nome = showInputDialog("nome do fornecedor");
-        ;
-        long cnpj = parseLong(showInputDialog("CNPJ do fornecedor"));
+        String nome = showInputDialog("Nome do fornecedor:");
+
+        long cnpj = parseLong(showInputDialog("CNPJ do fornecedor:"));
         fornecedor[idxFornecedor] = new Fornecedor(nome, cnpj);
         idxFornecedor++;
         return fornecedor[idxFornecedor - 1];

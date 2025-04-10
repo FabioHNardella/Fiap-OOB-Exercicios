@@ -2,7 +2,7 @@
   <artifact type="jar" name="BilheteUnico:jar">
     <output-path>$USER_HOME$/Desktop</output-path>
     <root id="archive" name="BilheteUnico.jar">
-      <element id="module-output" name="exercicio05" />
+      <element id="module-output" name="exc05" />
     </root>
   </artifact>
 </component>
