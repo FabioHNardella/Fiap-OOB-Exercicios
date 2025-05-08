@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/9- ExcsArrayList/9- ExcsArrayList.iml" filepath="$PROJECT_DIR$/9- ExcsArrayList/9- ExcsArrayList.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" filepath="$PROJECT_DIR$/Fiap-OOB-Exercicios.iml" />
-      <module fileurl="file://$PROJECT_DIR$/exc07/exc07.iml" filepath="$PROJECT_DIR$/exc07/exc07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7- ExcsEncapsulamento/exc07.iml" filepath="$PROJECT_DIR$/7- ExcsEncapsulamento/exc07.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercicio07/exercicio07.iml" filepath="$PROJECT_DIR$/exercicio07/exercicio07.iml" />
     </modules>
   </component>
